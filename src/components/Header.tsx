@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -33,7 +32,6 @@ const Header = () => {
           READORA
         </a>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a href="#home" className="nav-link">
             Home
@@ -49,7 +47,6 @@ const Header = () => {
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -58,11 +55,15 @@ const Header = () => {
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
-        {/* Mobile Navigation */}
         <div
-          className={`fixed inset-0 bg-background flex flex-col items-center justify-center space-y-8 transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-0 bg-background/80 backdrop-blur-sm flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden`}
+          style={{
+            maxWidth: '300px',
+            right: 0,
+            left: 'auto'
+          }}
         >
           <button
             className="absolute top-6 right-4 focus:outline-none"
@@ -71,34 +72,36 @@ const Header = () => {
           >
             <X size={24} />
           </button>
-          <a
-            href="#home"
-            className="text-2xl font-medium hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Home
-          </a>
-          <a
-            href="#about"
-            className="text-2xl font-medium hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            About
-          </a>
-          <a
-            href="#portfolio"
-            className="text-2xl font-medium hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Portfolio
-          </a>
-          <a
-            href="#contact"
-            className="text-2xl font-medium hover:text-primary transition-colors"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Contact
-          </a>
+          <nav className="flex flex-col items-center space-y-8">
+            <a
+              href="#home"
+              className="text-xl font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="text-xl font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </a>
+            <a
+              href="#portfolio"
+              className="text-xl font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Portfolio
+            </a>
+            <a
+              href="#contact"
+              className="text-xl font-medium hover:text-primary transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </a>
+          </nav>
         </div>
       </div>
     </header>

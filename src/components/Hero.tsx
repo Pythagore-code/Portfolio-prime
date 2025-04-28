@@ -1,11 +1,40 @@
-
 import { ArrowRight } from "lucide-react";
+import { useIsMobile } from "../hooks/use-mobile";
 
 const Hero = () => {
+  const isMobile = useIsMobile();
+  
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20">
-      <div className="container">
+    <section 
+      id="home" 
+      className="min-h-screen flex items-center pt-20 relative"
+    >
+      {isMobile && (
+        <div 
+          className="absolute inset-0 -z-10"
+          style={{
+            backgroundImage: `url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            opacity: 0.15
+          }}
+        />
+      )}
+      
+      <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
+          {!isMobile && (
+            <div className="mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+              <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary">
+                <img 
+                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          )}
+
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
             <h1 className="font-bold mb-6">
               Creative Designer <br /> & Developer
