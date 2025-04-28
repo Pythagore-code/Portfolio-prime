@@ -1,3 +1,4 @@
+
 import { ArrowRight, Download } from "lucide-react";
 import { useIsMobile } from "../hooks/use-mobile";
 
@@ -15,7 +16,7 @@ const Hero = () => {
           backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          opacity: 0.15
+          opacity: 0.3  // Augmenté l'opacité de 0.15 à 0.3
         }}
       />
       
