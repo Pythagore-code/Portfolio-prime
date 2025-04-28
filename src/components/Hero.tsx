@@ -11,12 +11,10 @@ const Hero = () => {
       className="min-h-screen flex items-center pt-20 relative"
     >
       <div 
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.3  // Augmenté l'opacité de 0.15 à 0.3
+          backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2000')`,
+          opacity: 0.3
         }}
       />
       
