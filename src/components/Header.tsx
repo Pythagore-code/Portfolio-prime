@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -56,7 +57,7 @@ const Header = () => {
         </button>
 
         <div
-          className={`fixed inset-y-0 right-0 bg-background/80 backdrop-blur-sm w-full flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-0 bg-background/80 backdrop-blur-sm w-full flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden`}
         >
@@ -67,31 +68,31 @@ const Header = () => {
           >
             <X size={24} />
           </button>
-          <nav className="flex flex-col items-center space-y-8">
+          <nav className="flex flex-col items-center space-y-8 w-full px-6">
             <a
               href="#home"
-              className="text-xl font-medium hover:text-primary transition-colors"
+              className="text-xl font-medium hover:text-primary transition-colors w-full text-center py-3 border-b border-border"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </a>
             <a
               href="#about"
-              className="text-xl font-medium hover:text-primary transition-colors"
+              className="text-xl font-medium hover:text-primary transition-colors w-full text-center py-3 border-b border-border"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </a>
             <a
               href="#portfolio"
-              className="text-xl font-medium hover:text-primary transition-colors"
+              className="text-xl font-medium hover:text-primary transition-colors w-full text-center py-3 border-b border-border"
               onClick={() => setIsMenuOpen(false)}
             >
               Portfolio
             </a>
             <a
               href="#contact"
-              className="text-xl font-medium hover:text-primary transition-colors"
+              className="text-xl font-medium hover:text-primary transition-colors w-full text-center py-3 border-b border-border"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
