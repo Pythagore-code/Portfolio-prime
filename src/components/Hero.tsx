@@ -72,13 +72,18 @@ const Hero = () => {
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
+              <a href="#contact" className="btn btn-outline">
+                Contact Me
+              </a>
+            </div>
+            <div className="mt-8">
               <a 
                 href="/path/to/your/cv.pdf" 
                 download 
-                className="btn btn-outline flex items-center justify-center"
+                className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
               >
+                <Download className="mr-2 h-4 w-4" />
                 Download CV
-                <Download className="ml-2 h-5 w-5" />
               </a>
             </div>
           </div>
