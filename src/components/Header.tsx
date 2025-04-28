@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -56,13 +57,14 @@ const Header = () => {
         </button>
 
         <div
-          className={`fixed inset-0 bg-background/80 backdrop-blur-sm flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
+          className={`fixed inset-y-0 bg-background/80 backdrop-blur-sm flex flex-col items-center justify-center transition-transform duration-300 ease-in-out ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } md:hidden`}
           style={{
-            maxWidth: '300px',
+            maxWidth: '250px',
             right: 0,
-            left: 'auto'
+            left: 'auto',
+            height: '100vh'
           }}
         >
           <button
