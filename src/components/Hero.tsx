@@ -1,4 +1,3 @@
-
 import { ArrowRight, Download } from "lucide-react";
 import { useIsMobile } from "../hooks/use-mobile";
 
@@ -10,17 +9,15 @@ const Hero = () => {
       id="home" 
       className="min-h-screen flex items-center pt-20 relative"
     >
-      {isMobile && (
-        <div 
-          className="absolute inset-0 -z-10"
-          style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.15
-          }}
-        />
-      )}
+      <div 
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          opacity: 0.15
+        }}
+      />
       
       <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
