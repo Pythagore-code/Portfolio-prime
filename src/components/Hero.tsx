@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center pt-20 relative"
+      className="min-h-screen flex items-center pt-20 pb-12 md:pb-20 relative"
     >
       <div 
         className="absolute inset-0 -z-10 bg-cover bg-center"
@@ -20,9 +20,9 @@ const Hero = () => {
       
       <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+          <div className="mb-6 md:mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
             <label htmlFor="profile-upload" className="cursor-pointer">
-              <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary relative group">
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-4 border-primary relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80" 
                   alt="Profile" 
@@ -49,19 +49,19 @@ const Hero = () => {
           </div>
 
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
-            <h1 className="font-bold mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
               Creative Designer <br /> & Developer
             </h1>
           </div>
           
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-muted-foreground mb-6 md:mb-8 max-w-2xl mx-auto px-4">
               I design and code beautifully simple things, and I love what I do. Just simple like that!
             </p>
           </div>
           
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
               <a href="#portfolio" className="btn btn-primary">
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -70,7 +70,7 @@ const Hero = () => {
                 Contact Me
               </a>
             </div>
-            <div className="mt-8">
+            <div className="mt-6 md:mt-8">
               <a 
                 href="/path/to/your/cv.pdf" 
                 download 

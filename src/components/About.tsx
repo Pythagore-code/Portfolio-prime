@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="section bg-secondary">
+    <section id="about" className="section bg-secondary pt-12 md:pt-24">
       <div className="container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
