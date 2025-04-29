@@ -20,35 +20,33 @@ const Hero = () => {
       
       <div className="container relative">
         <div className="max-w-3xl mx-auto text-center">
-          {!isMobile && (
-            <div className="mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
-              <label htmlFor="profile-upload" className="cursor-pointer">
-                <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary relative group">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80" 
-                    alt="Profile" 
-                    className="w-full h-full object-cover transition-opacity group-hover:opacity-80"
-                  />
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="text-white text-sm">Update Profile</span>
-                  </div>
+          <div className="mb-8 animate-fade-in opacity-0" style={{ animationDelay: "0.1s", animationFillMode: "forwards" }}>
+            <label htmlFor="profile-upload" className="cursor-pointer">
+              <div className="w-40 h-40 mx-auto rounded-full overflow-hidden border-4 border-primary relative group">
+                <img 
+                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80" 
+                  alt="Profile" 
+                  className="w-full h-full object-cover transition-opacity group-hover:opacity-80"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-white text-sm">Update Profile</span>
                 </div>
-              </label>
-              <input 
-                type="file" 
-                id="profile-upload" 
-                className="hidden" 
-                accept="image/*"
-                onChange={(e) => {
-                  const file = e.target.files?.[0];
-                  if (file) {
-                    // Handle file upload here
-                    console.log("File selected:", file);
-                  }
-                }}
-              />
-            </div>
-          )}
+              </div>
+            </label>
+            <input 
+              type="file" 
+              id="profile-upload" 
+              className="hidden" 
+              accept="image/*"
+              onChange={(e) => {
+                const file = e.target.files?.[0];
+                if (file) {
+                  // Handle file upload here
+                  console.log("File selected:", file);
+                }
+              }}
+            />
+          </div>
 
           <div className="animate-fade-in opacity-0" style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}>
             <h1 className="font-bold mb-6">
@@ -81,12 +79,6 @@ const Hero = () => {
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </a>
-            </div>
-          </div>
-
-          <div className="mt-20 animate-fade-in opacity-0" style={{ animationDelay: "0.8s", animationFillMode: "forwards" }}>
-            <div className="w-32 h-32 rounded-full mx-auto border-4 border-muted bg-secondary flex items-center justify-center">
-              <span className="text-lg font-medium">Scroll</span>
             </div>
           </div>
         </div>
